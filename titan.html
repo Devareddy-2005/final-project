@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            background-color: rgba(213, 238, 238, 0.204);
+        }
+        .navbar-nav .dropdown-menu {
+            background-color: #f8f9fa;
+        }
+        .navbar-nav .dropdown-item:hover {
+            background-color: #e2e6ea;
+        }
+        .dropdown-submenu {
+            position: relative;
+        }
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+        }
+        .left-sidebar {
+            height: 100vh;
+            position: fixed;
+            width: 220px;
+            background-color: #81b1e146;
+            padding-top: 20px;
+            overflow-y: auto; /* Added for scrolling */
+        }
+        .content-area {
+            margin-left: 240px;
+            padding: 20px;
+        }
+        .container:hover{
+            background-color: rgba(176, 230, 230, 0.193);
+            transform: translateY(-5px);
+            box-shadow: black;
+        }
+        .navbar-brand img {
+            height: 90px; /* Adjust the height of the logo as needed */
+            width: 90px; /* Maintain aspect ratio */
+            margin-right: 0px; /* Adjust spacing between logo and text */
+            border-radius: 20px;
+        }
+        .card {
+            margin-bottom: 10px;
+        }
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card {
+      overflow: hidden;
+      margin: 0 auto;
+      box-shadow: 2px 3px 10px rgb(125, 116, 116);
+    }
+
+    .card img {
+      transition: 0.5s all ease-in-out;
+    }
+
+    .card:hover img {
+      transform: scale(1.5);
+    }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" href="homepageee.html"><img src="weblogo.jpg" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <div class="container">
+                <li class="nav-item active"><center>
+                    <a class="nav-link" href="#"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-store"></i> Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-info-circle"></i> About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-th-list"></i> Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-star"></i> Branded</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"><i class="fas fa-star"></i> All</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-star"></i> Classic</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-star"></i> Premium</a>
+                        </div>
+                        <a class="dropdown-item" href=".\homepageee.html"><i class="fas fa-star"></i> Classic</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-star"></i> Premium</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav></center>
+    
+
+<div class="left-sidebar">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">All Collection</h5>
+            <p class="card-text"></p>
+            <a href="shoppage.html" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Titan Collection</h5>
+            <p class="card-text"></p>
+            <a href=".\titan.html" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Fossil Collection</h5>
+            <p class="card-text"></p>
+            <a href=".\fossil.html" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Rolex Collection</h5>
+            <p class="card-text"></p>
+            <a href="rolex.html" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
+
+<div class="content-area">
+    <h1>Welcome to the Shopping Page</h1>
+    <p>This is the main content area.</p>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tit Titan Automatics Silver Dial Automatic Leather Strap watch for Men14,580.jpg" class="card-img-top product-img" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Titan</h5>
+                    <p class="card-text">Titan Automatics Silver Dial Automatic Leather Strap watch for Men</p>
+<h5>Rs.14,580/- Only</h5>
+                    <a href=".\orderform.html" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tit Titan Ceramic Fusion Skeleton Automatic Rich Black Dial Steel & Ceramic Strap Watch For Men 25,495.jpg" class="card-img-top product-img" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">Titan</h5>
+                    <p class="card-text">Titan Ceramic Fusion Skeleton Automatic Rich Black Dial Steel & Ceramic Strap Watch For Men</p>
+                    <h5>Rs.25,495/-Only</h5>
+                    
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tit Titan Edge Squircle Quartz in Atlantic Blue with Glossy Ceramic Unisex Watch43,495.jpg" class="card-img-top product-img" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">Titan</h5>
+                    <p class="card-text">Titan Edge Squircle Quartz in Atlantic Blue with Glossy Ceramic Unisex Watch</p>
+                    <h5>Rs.43,495/-Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tit Kenneth Cole Black Dial Automatic Watch for Men16,995.jpg" class="card-img-top product-img" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Kenneth</h5>
+                    <p class="card-text">Kenneth Cole Black Dial Automatic Watch for Men</p>
+                    <h5>Rs.16,995/-Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-area">
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tit Kenneth Cole Maroon Dial Automatic Watch for Men17,995.jpg" class="card-img-top product-img" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Kenneth</h5>
+                    <p class="card-text">Kenneth Cole Maroon Dial Automatic Watch for Men</p>
+                    <h5>Rs.17,995/-Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tit Police Grey Dial Black Strap Multifunction Watch for Men23,000.jpg" class="card-img-top product-img" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">Police</h5>
+                    <p class="card-text">Police Grey Dial Black Strap Multifunction Watch for Men</p>
+                    <h5>Rs.23,000/-Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tita Titan Edge Baseline Black Dial Analog Stainless Steel Strap Watch for Men12,395.jpg" class="card-img-top product-img" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">Titan</h5>
+                    <p class="card-text">Titan Edge Baseline Black Dial Analog Stainless Steel Strap Watch for Men</p>
+                    <h5>Rs.12,395/-Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tit Titan Metal Mechanicals Anthracite Dial Analog Titanium Strap watch for Men 27,275.jpg" class="card-img-top product-img" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Titan</h5>
+                    <p class="card-text">Titan Metal Mechanicals Anthracite Dial Analog Titanium Strap watch for Men</p>
+                    <h5>Rs.27,275/-Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-area">
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tit Titan Nebula Deccan Treasures Quartz Analog with Date 18 Karat Solid Gold Watch for Men150000.jpg" class="card-img-top product-img" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Titan</h5>
+                    <p class="card-text">Titan Nebula Deccan Treasures Quartz Analog with Date 18 Karat Solid Gold Watch for Men</p>
+                    <h5>Rs.1,50,000/-Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tit Titan Nebula Quartz Analog 18 Karat Solid Gold Watch for Men275,000.jpg" class="card-img-top product-img" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">Titan</h5>
+                    <p class="card-text">Titan Nebula Quartz Analog 18 Karat Solid Gold Watch for Men</p>
+                    <h5>Rs.2,75,000/-Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tit Titan Talk S Blue Dial Smart Silicone Strap watch for Unisex 8,995.jpg" class="card-img-top product-img" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">Titan</h5>
+                    <p class="card-text">Titan Talk S Blue Dial Smart Silicone Strap watch for Unisex</p>
+                    <h5>Rs.8,995/-Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="tita Titan Metal Mechanicals Blue Dial Stainless Steel Strap Watch for Men22,435.jpg" class="card-img-top product-img" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Titan</h5>
+                    <p class="card-text">Titan Metal Mechanicals Blue Dial Stainless Steel Strap Watch for Men</p>
+                    <h5>Rs.22,435/-Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

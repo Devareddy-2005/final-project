@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      margin-top: 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: rgba(175, 241, 241, 0.195);
+      box-shadow: 2px 3px 10px rgb(125, 116, 116);
+       
+      color: #f8f9fa;
+    }
+
+    .card-header {
+      background-color: #3677bc37;
+      color: rgb(31, 3, 3);
+      font-size: 1.25rem;
+    }
+
+    .btn-primary {
+      background-color: #3f85d048;
+      border: none;
+      color: black;
+    }
+
+    .btn-back {
+      background-color: #d0d0d0;
+      border: none;
+      color: black;
+      margin-top: 10px;
+    }
+    .logo {
+           position: absolute;
+           top: 20px;
+           left: 20px;
+           border-radius: 30px;
+           box-shadow: 0px 4px 4px white;
+       }
+  </style>
+</head>
+<body background="forgot pass bg.jpg">
+  <img src="weblogo.jpg" alt="logo" class="logo" width="90px" height="90px">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header text-center">
+            Forgot Password
+          </div>
+          <div class="card-body">
+            <form id="forgot-password-form">
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              <button  type="button" class="btn btn-back btn-block" onclick="goBack()">Back</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('forgot-password-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Your password reset link has been sent to your email address.');
+      document.getElementById('email').value = '';
+    });
+
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

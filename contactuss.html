@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Watch Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    body {
+      padding-top: 50px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    nav {
+      background: rgba(237,237,237,.1);
+           backdrop-filter: blur(10px);
+    }
+    .nav-link {
+      color: white !important;
+    }
+    .navbar-brand img {
+      height: 90px; 
+      width: 90px; 
+      margin-right: 0px; 
+      border-radius: 20px;
+    }
+    footer {
+      background-color: rgba(198, 217, 217, 0.185);
+    }
+    .contact-card {
+      max-width: 800px;
+      background: rgba(237,237,237,.1);
+           backdrop-filter: blur(10px);
+      box-shadow: 2px 3px 10px rgb(71, 69, 69);
+      
+  
+    }
+  </style>
+</head>
+<body>
+  
+  
+  <video class="background-video" autoplay muted loop>
+    <source src="The Rolex Submariner.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+ 
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <a class="navbar-brand" href="homepageee.html"><img src="weblogo.jpg" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href=".\homepageee.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shoppage.html"><i class="fas fa-shopping-cart"></i> Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="abouutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="contactuss.html"><i class="fas fa-envelope"></i> Contact Us</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+
+  
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card contact-card">
+            <div class="card-body">
+              <h3 class="text-center">Contact Us</h3>
+              <hr>
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="text-white text-center py-3">
+    <div class="">
+      <p>&copy; 2024 Timezone.web All rights reserved.</p>
+    </div>
+  </footer>
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      
+      if (name.trim() === '') {
+        alert('Please enter your name.');
+        return;
+      }
+
+      
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      
+      if (message.trim() === '') {
+        alert('Please enter your message.');
+        return;
+      }
+
+      
+      alert('Form submitted successfully!');
+
+      
+      document.getElementById('contactForm').reset();
+    });
+  </script>
+</body>
+</html>

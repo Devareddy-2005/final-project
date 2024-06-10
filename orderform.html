@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+
+    .container {
+        background: rgba(237,237,237,.1);
+           backdrop-filter: blur(10px);
+        width: 400px;
+        box-shadow: 2px 3px 10px rgb(125, 116, 116);
+    }
+
+    body {
+        background-image: url("orderformbg1.jpg");
+        align-content: flex-end;
+        background-size: cover;
+    }
+
+    .online-payment-form {
+        display: none;
+    }
+</style>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Order Form</h2>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="brand">Brand Name</label>
+                <input type="text" class="form-control" id="brand" placeholder="Enter brand name" required>
+            </div>
+            <div class="form-group">
+                <label for="model">Model Name</label>
+                <input type="text" class="form-control" id="model" placeholder="Enter model name" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" class="form-control" id="quantity" placeholder="Enter quantity" required min="1">
+            </div>
+            <div class="form-group">
+                <label for="address">Shipping Address</label>
+                <textarea class="form-control" id="address" rows="3" placeholder="Enter your shipping address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Payment Method</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="onlinePayment" value="online">
+                    <label class="form-check-label" for="onlinePayment">Online</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="cashOnDelivery" value="cod">
+                    <label class="form-check-label" for="cashOnDelivery">Cash on Delivery</label>
+                </div>
+            </div>
+            <div class="online-payment-form" id="onlinePaymentForm">
+                <h3>Online Payment Details</h3>
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="Enter your card number">
+                </div>
+                <div class="form-group">
+                    <label for="expiryDate">Expiry Date</label>
+                    <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" class="form-control" id="cvv" placeholder="CVV">
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit Order</button>
+            </div>
+        </form>
+    </div>
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        document.getElementById('onlinePayment').addEventListener('change', function() {
+            var onlinePaymentForm = document.getElementById('onlinePaymentForm');
+            if (this.checked) {
+                onlinePaymentForm.style.display = 'block';
+            } else {
+                onlinePaymentForm.style.display = 'none';
+            }
+        });
+
+        document.getElementById('cashOnDelivery').addEventListener('change', function() {
+            var onlinePaymentForm = document.getElementById('onlinePaymentForm');
+            if (this.checked) {
+                onlinePaymentForm.style.display = 'none';
+            }
+        });
+
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var brand = document.getElementById('brand').value;
+            var model = document.getElementById('model').value;
+            var quantity = document.getElementById('quantity').value;
+            var address = document.getElementById('address').value;
+            var onlinePayment = document.getElementById('onlinePayment').checked;
+            var cashOnDelivery = document.getElementById('cashOnDelivery').checked;
+
+            
+            if (name === '' || email === '' || phone === '' || brand === '' || model === '' || quantity === '' || address === '' || (!onlinePayment && !cashOnDelivery)) {
+                alert('Please fill in all fields and select at least one payment method.');
+                return;
+            }
+
+            
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            
+            var phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert('Please enter a valid 10-digit phone number.');
+                return;
+            }
+
+            
+            if (quantity <= 0) {
+                alert('Quantity must be at least 1.');
+                return;
+            }
+
+            
+            if (onlinePayment) {
+                var cardNumber = document.getElementById('cardNumber').value;
+                var expiryDate = document.getElementById('expiryDate').value;
+                var cvv = document.getElementById('cvv').value;
+
+                if (cardNumber === '' || expiryDate === '' || cvv === '') {
+                    alert('Please fill in all online payment fields.');
+                    return;
+                }
+            }
+
+            
+            alert('Your order has been submitted successfully.');
+
+            
+            window.location.href = 'homepageee.html'; 
+        });
+    </script>
+</body>
+</html>

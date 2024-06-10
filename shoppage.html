@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            background-color: rgba(213, 238, 238, 0.204);
+        }
+        .navbar-nav .dropdown-menu {
+            background-color: #f8f9fa;
+        }
+        .navbar-nav .dropdown-item:hover {
+            background-color: #e2e6ea;
+        }
+        .dropdown-submenu {
+            position: relative;
+        }
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+        }
+        .left-sidebar {
+            height: 100vh;
+            position: fixed;
+            width: 220px;
+            background-color: #81b1e146;
+            padding-top: 20px;
+            overflow-y: auto; /* Added for scrolling */
+        }
+        .content-area {
+            margin-left: 240px;
+            padding: 20px;
+        }
+        .container:hover {
+            background-color: rgba(176, 230, 230, 0.193);
+            transform: translateY(-5px);
+            box-shadow: black;
+        }
+        .navbar-brand img {
+            height: 90px; /* Adjust the height of the logo as needed */
+            width: 90px; /* Maintain aspect ratio */
+            margin-right: 0px; /* Adjust spacing between logo and text */
+            border-radius: 20px;
+        }
+        .card {
+            margin-bottom: 10px;
+        }
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card {
+            overflow: hidden;
+            margin: 0 auto;
+            box-shadow: 2px 3px 10px rgb(125, 116, 116);
+        }
+        .card img {
+            transition: 0.5s all ease-in-out;
+        }
+        .card:hover img {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="homepageee.html"><img src="weblogo.jpg" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="homepageee.html"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="shoppage.html"><i class="fas fa-shopping-cart"></i> Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="abouutus.html"><i class="fas fa-info-circle"></i> About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-list"></i> Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item dropdown-toggle" href="#">Branded</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">All</a>
+                        <a class="dropdown-item" href="#">Classic</a>
+                        <a class="dropdown-item" href="#">Premium</a>
+                    </div>
+                    <a class="dropdown-item" href=".\homepageee.html">Classic</a>
+                    <a class="dropdown-item" href="#">Premium</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contactuss.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="left-sidebar">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">All Collection</h5>
+            <p class="card-text"></p>
+            <a href="shoppage.html" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Titan Collection</h5>
+            <p class="card-text"></p>
+            <a href=".\titan.html" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Fossil Collection</h5>
+            <p class="card-text"></p>
+            <a href=".\fossil.html" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Rolex Collection</h5>
+            <p class="card-text"></p>
+            <a href=".\rolex.html" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
+
+<div class="content-area">
+    <h1>Welcome to the Shopping Page</h1>
+    <p>This is the main content area.</p>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="DANIEL KLEIN PREMIUM MEN BLACK DIAL WATCH1,653.jpg" class="card-img-top product-img" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">DANIEL KLEIN</h5>
+                    <p class="card-text">DANIEL KLEIN PREMIUM MEN BLACK DIAL WATCH1</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="DANIEL KLEIN PREMIUM MEN BLACK WATCH3,411.jpg" class="card-img-top product-img" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">DANIEL KLEIN</h5>
+                    <p class="card-text">DANIEL KLEIN PREMIUM MEN BLACK WATCH</p>
+                    <h4>Rs.1745.00/-</h4>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="DANIEL KLEIN PREMIUM MEN BROWN DIAL WATCH2,640.jpg" class="card-img-top product-img" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">DANIEL KLEIN</h5>
+                    <p class="card-text">DANIEL KLEIN PREMIUM MEN BROWN DIAL WATCH</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="fast Fastrack Bare Basics Quartz Analog with Date Grey Dial Leather Strap Watch for Guys2,155.jpg" class="card-img-top product-img" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Fastrack</h5>
+                    <p class="card-text">Fastrack Bare Basics Quartz Analog with Date Grey Dial Leather Strap Watch for Guys</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-area">
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="fast Fastrack Fastfit Quartz Multifunction White Dial Stainless Steel Strap Watch for Guys3,495.jpg" class="card-img-top product-img" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Fastrack</h5>
+                    <p class="card-text">Fastrack Fastfit Quartz Multifunction White Dial Stainless Steel Strap Watch for Guys</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="fast Fastrack Bare Basics Quartz Analog with Date White Dial Stainless Steel Strap Watch for Guys2,155.jpg" class="card-img-top product-img" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">Fastrack</h5>
+                    <p class="card-text">Fastrack Bare Basics Quartz Analog with Date White Dial Stainless Steel Strap Watch for Guys</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="fast Fastrack Fleek Quartz Multifunction Green Dial Leather Strap Watch For Guys4,995.jpg" class="card-img-top product-img" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">Fastrack</h5>
+                    <p class="card-text">Fastrack Fleek Quartz Multifunction Green Dial Leather Strap Watch For Guys</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="fo Copeland 42-mm Three-Hand Black Leather Watch3,998.jpg" class="card-img-top product-img" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Fossil</h5>
+                    <p class="card-text">Copeland 42-mm Three-Hand Black Leather Watch</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-area">
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="fo Decker Chronograph Brown Leather Watch5,997.jpg" class="card-img-top product-img" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Fossil</h5>
+                    <p class="card-text">Decker Chronograph Brown Leather Watch</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="fo Decker Silicone Watch Black with Orange5,997.jpg" class="card-img-top product-img" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">Fossil</h5>
+                    <p class="card-text">Decker Silicone Watch Black with Orange</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="fo Grant Sport Chronograph Blue Leather Watch7,497.jpg" class="card-img-top product-img" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">Fossil</h5>
+                    <p class="card-text">Grant Sport Chronograph Blue Leather Watch</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="timex Q Timex 3 Hands Men's Analog White Dial Coloured Quartz Watch, Round Dial With 38 Mm Case Width - TW2U61200U9 12,995.jpg" class="card-img-top product-img" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Timex</h5>
+                    <p class="card-text">timex Q Timex 3 Hands Men's Analog White Dial Coloured Quartz Watch, Round Dial With 38 Mm Case Width - TW2U61200U9</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-area">
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="timex Timex E Class Men's Green Dial Round Case Automatic Function Watch -TWEG16717 12,495.jpg" class="card-img-top product-img" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Timex</h5>
+                    <p class="card-text">Timex E Class Men's Green Dial Round Case Automatic Function Watch -TWEG16717</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="timex Timex Fashion Men's Digital Brown Dial Round Case Multifunction Function Watch -TW000U914 4,095.jpg" class="card-img-top product-img" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">Timex </h5>
+                    <p class="card-text">Timex Fashion Men's Digital Brown Dial Round Case Multifunction Function Watch -TW000U914</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="timex Timex Men Blue Analog Round Stainless Steel Dial Watch - TW2U62000U9 10,995.jpg" class="card-img-top product-img" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">Timex</h5>
+                    <p class="card-text">Timex Men Blue Analog Round Stainless Steel Dial Watch - TW2U62000U9</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="casin FULL METAL 2100series gm-b2100ad-2a 42,995.jpg" class="card-img-top product-img" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Casio</h5>
+                    <p class="card-text">FULL METAL 2100 series GM-B2100AD-2a</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-area">
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="casin PRG-340 Series 15,995.jpg" class="card-img-top product-img" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Casio</h5>
+                    <p class="card-text">PRG-340 Series </p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="casin Vintage a158wa-1-1695.jpg" class="card-img-top product-img" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">Casio</h5>
+                    <p class="card-text">Vintage A158WA-1</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="casin Vintage a171wegg-1a-4995.jpg" class="card-img-top product-img" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">Casio</h5>
+                    <p class="card-text">Vintage A171WEGG-1A</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="fast Fastrack Quartz Analog Black Dial Black Stainless Steel Strap Watch for Guys2,555.jpg" class="card-img-top product-img" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Fastrack</h5>
+                    <p class="card-text">Fastrack Quartz Analog Black Dial Black Stainless Steel Strap Watch for Guys</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-area">
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="fast Fastrack Quartz Analog Silver Dial Stainless Steel Strap Watch for Guys3,275.jpg" class="card-img-top product-img" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Fastrack</h5>
+                    <p class="card-text">Fastrack Quartz Analog Silver Dial Stainless Steel Strap Watch for Guys</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="cartier Ballon Bleu de Cartier watch, 42 mm. Mechanical movement with automatic winding, caliber 1847 MC. 715000.jpg" class="card-img-top product-img" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">cartier</h5>
+                    <p class="card-text">Ballon Bleu de Cartier watch, 42 mm. Mechanical movement with automatic winding, caliber 1847 MC.</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="cartier Santos de Cartier watch, large model, Manufacture mechanical movement with automatic winding, caliber 1847 MC. 770000.jpg" class="card-img-top product-img" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">cartier</h5>
+                    <p class="card-text">Santos de Cartier watch, large model, Manufacture mechanical movement with automatic winding, caliber 1847 MC.</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="cartier Santos Skeleton watch, large model, Manufacture mechanical movement with manual winding, caliber 9611 MC. 2,910,000.jpg" class="card-img-top product-img" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">cartier</h5>
+                    <p class="card-text">Santos Skeleton watch, large model, Manufacture mechanical movement with manual winding, caliber 9611 MC.</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-area">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="rol sea dweller1.jpg" class="card-img-top product-img" alt="Product 1" data-target="#videoModal1">
+                <div class="card-body">
+                    <h5 class="card-title">Rolex</h5>
+                    <p class="card-text">Oyster Perpetual Sea Dweller
+                    </p>
+                    <h5>Rs.10,21,856/- Only</h5>
+                    <a href="" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="rol yatch master .jpg" class="card-img-top product-img" alt="Product 2" data-target="#videoModal2">
+                <div class="card-body">
+                    <h5 class="card-title">Rolex</h5>
+                    <p class="card-text">Oyster Perpetual Yatch Master
+                    </p>
+                    <h5>Rs.10,76,323/- Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="rol 1908.jpg" class="card-img-top product-img" alt="Product 3" data-target="#videoModal3">
+                <div class="card-body">
+                    <h5 class="card-title">Rolex</h5>
+                    <p class="card-text">Perpetual 1908</p>
+                    <h5>Rs.22,45,665/- Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="rol explorer.jpg" class="card-img-top product-img" alt="Product 4" data-target="#videoModal4">
+                <div class="card-body">
+                    <h5 class="card-title">Rolex</h5>
+                    <p class="card-text">Oyster Perpetual Explorer
+                    </p>
+                    <h5>Rs.6,76,067/-Only</h5>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div></div>
+
+
+</body>
+</html>
+
+

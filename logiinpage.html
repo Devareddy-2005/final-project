@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Javascript function</title>
+   <style>
+       body {
+           margin: 0;
+           display: flex;
+           justify-content: center;
+           align-items: center; 
+           height: 100vh; 
+           flex-direction: column; 
+           position: relative;
+           overflow: hidden; }
+
+       video.background-video {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           transform: translate(-50%, -50%);
+           z-index: -1; }
+
+       .login-form,
+       .register-form {
+           background: rgba(237,237,237,.1);
+           backdrop-filter: blur(10px);
+           padding: 20px;
+           border-radius: 10px;
+           text-align: center; 
+           box-shadow: rgb(240, 14, 14);
+           margin-bottom: 20px;
+           box-shadow: 2px 3px 10px rgb(125, 116, 116);
+       }
+       
+
+       input[type="text"],
+       input[type="password"] {
+           margin: 5px;
+           padding: 5px;
+           border-radius: 5px;
+       }
+
+       input[type="submit"] {
+           margin: 10px 0;
+           padding: 8px 20px;
+           border: none;
+           border-radius: 5px;
+           background-color: #4caf50;
+           color: white;
+           cursor: pointer;
+       }
+
+       .register-link,
+       .forgot-password-link {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #000; 
+            border-radius: 10px; 
+            text-decoration: none; 
+            color: rgb(20, 9, 1); 
+            background-color: rgb(248, 198, 198);
+            box-shadow: #02d80a;
+            margin-top: 10px;
+            
+       }
+
+       h2 {
+           font-size: large;
+           color: rgb(250, 244, 244);
+           text-align: top;
+       }
+
+       .logo {
+           position: absolute;
+           top: 20px;
+           left: 20px;
+           border-radius: 30px;
+       }
+
+       .container {
+           width: auto;
+           height: auto;
+           animation: fadeIn 2s ease-in;
+       }
+
+   </style>
+</head>
+
+<body>
+    
+    <!-- Background video -->
+    <video class="background-video" autoplay loop >
+        <source src="VID_20240607_221703.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <img src="weblogo.jpg" alt="logo" class="logo" width="90px" height="90px">
+
+    <div class="container">
+       <form class="login-form" name="myform" action="homepageee.html" onsubmit="return loginvalidation(this)">
+           <h2>Login page</h2>
+           User name:<br>
+           <input type="text" name="username"><br>
+           Password:<br>
+           <input type="password" name="password"><br>
+           <input type="checkbox" name="byke">Remember me<br>
+           <input type="submit" value="login"><br>
+           <a class="forgot-password-link" href="forgetpass.html">Forgot Password?</a>
+       </form>
+       <form class="register-form" name="registerForm" action="registered.html">
+           <center><h2>If You Don't have an account?</h2></center>
+           <ul>
+               <li><a class="register-link" href="regstration.html">Register Now</a></li>
+           </ul>
+       </form>
+    </div>
+   
+   <script>
+       // User validations
+       function loginvalidation() {
+           var uname = document.myform.username.value;
+           var password = document.myform.password.value;
+           if (uname == null || uname == "") {
+               alert("Name can't be blank");
+               return false;
+           } else if (password.length < 6) {
+               alert("Password must be at least 6 characters");
+               return false;
+           }
+           return true;
+       }
+   </script>
+</body>
+</html>
